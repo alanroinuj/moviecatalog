@@ -1,0 +1,39 @@
+.center{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card{
+  box-shadow: none;
+
+  ion-card-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-bottom: 1rem;
+
+    ion-icon{
+      padding-top: 1rem;
+      font-size: 4rem;
+    }
+  }
+
+
+
+  ion-input{
+    border-radius: 5px;
+    border: 1px solid #000;
+    margin-bottom: .5rem;
+    margin-top: .3rem;
+
+    ion-icon{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+}
+
+
