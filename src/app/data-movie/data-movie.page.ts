@@ -1,6 +1,6 @@
-import { IFilmes } from './../models/IFilmes.model';
 import { DataService } from './../services/data.service';
 import { Component, OnInit } from '@angular/core';
+import { IMovieApi } from '../models/IMovieApi.model';
 
 @Component({
   selector: 'app-data-movie',
@@ -9,12 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DataMoviePage implements OnInit {
 
-  movie: IFilmes;
+  movie: IMovieApi;
+
+  genres: string[] = [];
 
   constructor(public dataService: DataService) { }
 
   ngOnInit() {
     this.movie = this.dataService.getData('movie');
+    this.genres = this.dataService.getData('genres');
     console.log('Filme enviado', this.movie);
   }
 
